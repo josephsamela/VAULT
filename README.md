@@ -21,7 +21,7 @@ After getting setup - type "vault" into a terminal window. This will return the 
 -l will list information for all accounts 
 -h displays this help dialog
 ```
-I've included example account information in passwords.json for playing around with VAULT and seeing how it works. I recommend removing existing entries with -r before adding any new account information.
+I've included example account information in passwords.json for playing around with VAULT and seeing how it works. I recommend removing existing entries with -r before adding any new account information. NOTE using more than one "Master Password" will work for all instances except -list but is not recommended.
 
 For example to add and account enter:
 ![add](screenshots/screenshot2.png?raw=true "add")
@@ -30,7 +30,8 @@ For faster access to account info enter "vault accountName".
 ![get](screenshots/screenshot1.png?raw=true "get")
 
 ###Is this safe?
-Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the master key hash is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong hash and encrypt/decrypt will throw errors or return gibberish.
+Safer than an excel document, yes.
+Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the master key hash is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong key and encrypt/decrypt will throw errors or return gibberish.
 
 For more information on the AES cipher https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 
