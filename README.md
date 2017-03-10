@@ -5,11 +5,14 @@
 VAULT is a fast command line utility for securely storing and retrieving user account information.
 
 ###How do I set this up?
+Linux/MacOS
   1. Install Python 3.6 and "pycrypto" package
   2. Download the files in this repository to your computer (ie. ~/GitHub/vault)
   3. Add vault shell script to ~/.bin
   4. Add -->  export PATH=$PATH":$HOME/.bin"  <-- to .bash_profile or .bash_rc file
   5. In vault.py update "path" variable to point at passwords.json
+Windows
+  1. Instructions coming soon!
 
 ###How do I use this?
 After getting setup - type "vault" into a terminal window. This will return the following:
