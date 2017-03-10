@@ -46,12 +46,12 @@ For faster access to account info enter "vault accountName".
 ![get](screenshots/screenshot1.png?raw=true "get")
 
 ###Can I sync my passwords across computers?
-Sure! Do you have a folder backed up by Google Drive, OneDrive, Dropbox or another cloud storage service? Add passwords.json to this folder and edit the path in vault.py to point to this new location. When you make edits Google Drive, Dropbox, etc. will sync the latest version across your connected devices and back it up to the cloud.
+Sure! Do you have a folder backed up by Google Drive, OneDrive, Dropbox or another cloud storage service? Add passwords.json to this folder and edit the path in vault.py to point to this new location. When you make edits Google Drive, Dropbox, OneDrive or whatever will sync the latest version across your connected devices and back it up to the cloud.
 
 ###Is this safe?
-Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the key is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong key and encrypt/decrypt will throw errors or return gibberish.
+Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the key is not stored on your computer, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong key and encrypt/decrypt will throw errors or return gibberish.
 
-For more information on the AES cipher https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+For more information on the AES cipher see --> https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 
 ### Author
 * **Joe Samela** - *Initial work* - [ForYourBrain.net](http://www.foryourbrain.net)
