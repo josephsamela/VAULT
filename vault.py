@@ -64,6 +64,7 @@ class account():
             password = decrypt(password, masterkey)
 
             #print username & password to console
+            print('\n   '+accountName)
             print('\n   USERNAME --> '+str(username))
             print('   PASSWORD --> '+str(password)+'\n')
         else:
