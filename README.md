@@ -11,6 +11,7 @@ Linux/MacOS
   3. Add vault shell script to ~/.bin
   4. Add -->  export PATH=$PATH":$HOME/.bin"  <-- to .bash_profile or .bash_rc file
   5. In vault.py update "path" variable to point at passwords.json
+
 Windows
   1. Instructions coming soon!
 
