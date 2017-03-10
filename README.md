@@ -1,5 +1,5 @@
 # VAULT
-![Mosaic for Lego Digital Designer](banner.png?raw=true "Mosaic for Lego Digital Designer")
+![VAULT](banner.png?raw=true "VAULT")
 
 ##What is VAULT?
 VAULT is a fast command line utility for securely storing and retrieving user account information.
@@ -22,10 +22,10 @@ After getting setup - type "vault" into a terminal window. This will return the 
 -h displays this help dialog
 ```
 For example to add and account enter:
-![add](screenshots/screenshot2?raw=true "add")
+![add](screenshots/screenshot2.png?raw=true "add")
 
 For faster access to account info enter "vault accountName".
-![get](screenshots/screenshot1?raw=true "get")
+![get](screenshots/screenshot1.png?raw=true "get")
 
 ###Is this safe?
 Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the master key hash is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong hash and encrypt/decrypt will return gibberish.
