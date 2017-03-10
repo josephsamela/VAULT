@@ -7,9 +7,9 @@ VAULT is a fast command line utility for securely storing and retrieving user ac
 No more searching through that disorganized word doc with all your usernames and passwords in plaintext! (You know who you are...) Retrieving passworks is now as simple as:
 ```
 $ vault github
-    MASTER PASSWORD --> supersecretpassword!   #Enter your master password
+    MASTER PASSWORD --> supersecretpassword!   #Enter the master password
    
-    github                                     #Get you account information!
+    github                                     #Get your account information!
     USERNAME --> jkerman 
     PASSWORD --> munorbust!
 ```
