@@ -4,6 +4,15 @@
 ##What is VAULT?
 VAULT is a fast command line utility for securely storing and retrieving user account information.
 
+No more searching through that disorganized word doc with all your usernames and passwords in plaintext! (You know who you are...) Retrieving passworks is now as simple as:
+```
+$ vault github
+   MASTER PASSWORD --> supersecretpassword!
+   
+   USERNAME --> jkerman 
+   PASSWORD --> munorbust!
+```
+
 ###How do I set this up?
 Linux/MacOS
   1. Install Python 3.6 and "pycrypto" package
@@ -25,7 +34,9 @@ After getting setup - type "vault" into a terminal window. This will return the 
 -l will list information for all accounts 
 -h displays this help dialog
 ```
-I've included example account information in passwords.json for playing around with VAULT and seeing how it works. I recommend removing existing entries with -r before adding any new account information. NOTE using more than one "Master Password" will work for all instances except -list but is not recommended.
+I've included example account information in passwords.json for playing around with VAULT and seeing how it works. I recommend removing existing entries with "-remove" before adding any new account information. 
+
+NOTE using more than one "Master Password" will work for all functions except "-list" but is not recommended.
 
 For example to add and account enter:
 ![add](screenshots/screenshot2.png?raw=true "add")
@@ -37,8 +48,6 @@ For faster access to account info enter "vault accountName".
 Sure! Do you have a folder backed up by Google Drive, OneDrive, Dropbox or another cloud storage service? Add passwords.json to this folder and edit the path in vault.py to point to this new location. When you make edits Google Drive, Dropbox, etc. will sync the latest version across your connected devices and back it up to the cloud.
 
 ###Is this safe?
-Safer than plaintext, yeah.
-
 Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the key is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong key and encrypt/decrypt will throw errors or return gibberish.
 
 For more information on the AES cipher https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
