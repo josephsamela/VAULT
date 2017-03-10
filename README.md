@@ -4,7 +4,9 @@
 ##What is VAULT?
 VAULT is a fast command line utility for securely storing and retrieving user account information.
 
-No more searching through that disorganized word doc! (You know who you are...) VAULT makes retrieving passwords as simple as:
+No more searching through that disorganized word doc! (You know who you are...) 
+
+VAULT makes retrieving passwords as simple as:
 ```
 $ vault github
     MASTER PASSWORD --> supersecretpassword!   #Enter the master password
