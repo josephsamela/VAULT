@@ -1,5 +1,5 @@
 # VAULT
-![VAULT](banner.png?raw=true "VAULT")
+![VAULT](screenshots/banner.png?raw=true "VAULT")
 
 ##What is VAULT?
 VAULT is a fast command line utility for securely storing and retrieving user account information.
