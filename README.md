@@ -5,11 +5,11 @@
 VAULT is a fast command line utility for securely storing and retrieving user account information.
 
 ###How do I set this up?
-  1. Download the files in the repository
-  2. Move somewhere easy to access (ie. ~/GitHub/vault)
-  3. Add "vault" shell script to ~/.bin
-  4. Add -->  export PATH=$PATH":$HOME/.bin"  <-- to ".bash_profile" or ".bash_rc" file
-  5. In vault.py update path variable to point at passwords.json
+  1. Install Python 3.6 and "pycrypto" package
+  2. Download the files in this repository to your computer (ie. ~/GitHub/vault)
+  3. Add vault shell script to ~/.bin
+  4. Add -->  export PATH=$PATH":$HOME/.bin"  <-- to .bash_profile or .bash_rc file
+  5. In vault.py update "path" variable to point at passwords.json
 
 ###How do I use this?
 After getting setup - type "vault" into a terminal window. This will return the following:
@@ -28,7 +28,7 @@ For faster access to account info enter "vault accountName".
 ![get](screenshots/screenshot1.png?raw=true "get")
 
 ###Is this safe?
-Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the master key hash is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong hash and encrypt/decrypt will return gibberish.
+Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the master key hash is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong hash and encrypt/decrypt will throw errors or return gibberish.
 
 ### Author
 * **Joe Samela** - *Initial work* - [ForYourBrain.net](http://www.foryourbrain.net)

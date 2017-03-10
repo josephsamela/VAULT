@@ -4,7 +4,7 @@ from Crypto.Cipher import AES
 from Crypto.Hash import SHA256, MD5
 
 #Update this path to point to your passwords.json file. Keep it backed up!
-path = '/Users/jkerman/GitHub/vault/passwords.json'
+path = '/Users/josephsamela/GitHub/vault/passwords.json'
 
 import sys
 
