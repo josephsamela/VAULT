@@ -4,13 +4,48 @@ from Crypto.Cipher import AES
 from Crypto.Hash import SHA256, MD5
 
 #Update this path to point to your passwords.json file. Keep it backed up!
-path = 'passwords.json'
+path = '/Users/jkerman/GitHub/vault/passwords.json'
+
+import sys
+
+def run():
+    if len(sys.argv)<2:
+        account.help()
+        return
+
+    if sys.argv[1] == '-l' or sys.argv[1] == '-list':
+        account.list()
+    
+    elif sys.argv[1] == '-a' or sys.argv[1] == '-add':
+        account.add() 
+
+    elif sys.argv[1] == '-r' or sys.argv[1] == '-remove':
+        account.remove() 
+
+    elif sys.argv[1] == '-u' or sys.argv[1] == '-update':
+        account.update() 
+
+    elif sys.argv[1] == '-h' or sys.argv[1] == '-help':
+        account.help()
+    
+    elif sys.argv[1] == '-g' or sys.argv[1] == '-get':
+        account.get()
+
+    elif "-" not in sys.argv[1]:
+        account.get(sys.argv[1])
+
+    else:
+        print('Please enter a valid argument.')
+        account.help()
 
 class account():
-    def get():
-        #Get accountName
-        accountName = input('   ACCOUNT NAME --> ')
-        
+    def get(*accountName):
+        if not accountName:
+            #Get accountName
+            accountName = input('   ACCOUNT NAME --> ')
+        else:
+            accountName = accountName[0]
+
         #Open, decrypt and add to dictionary
         passwords = open(path)
         password_dictionary = json.load(passwords)
@@ -29,8 +64,8 @@ class account():
             password = decrypt(password, masterkey)
 
             #print username & password to console
-            print('USERNAME --> '+str(username))
-            print('PASSWORD --> '+str(password))
+            print('\n   USERNAME --> '+str(username))
+            print('   PASSWORD --> '+str(password)+'\n')
         else:
             print('Account not found')
 
@@ -141,7 +176,7 @@ class account():
             print('\n')
 
     def help():
-        print('VAULT is a command line utility for securely storing and retrieving user account information. \n\naccount.add() will add a new account \naccount.remove() will remove an existing account \naccount.update() will update information of an existing account \naccount.info() will show information for an existing account \naccount.list() will list information for all accounts \naccount.help displays this help dialog')
+        print('VAULT is a fast command line utility for securely storing and retrieving user account information. \n\n-a will add a new account \n-r will remove an existing account \n-u will update information of an existing account \n-g will get information for an existing account \n-l will list information for all accounts \n-h displays this help dialog')
 
 def encrypt(string, key):
     #This is the cipher used to encrypt and decrypt account info
@@ -171,3 +206,5 @@ def generatemasterkey():
     masterpassword = masterpassword.encode() #password from str to bytes
     masterkey = MD5.new(masterpassword).hexdigest()
     return masterkey
+
+run()
