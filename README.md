@@ -9,6 +9,7 @@ No more searching through that disorganized word doc with all your usernames and
 $ vault github
    MASTER PASSWORD --> supersecretpassword!
    
+   google
    USERNAME --> jkerman 
    PASSWORD --> munorbust!
 ```
