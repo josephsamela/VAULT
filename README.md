@@ -32,7 +32,7 @@ For faster access to account info enter "vault accountName".
 ###Is this safe?
 Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the master key hash is not stored anywhere, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong hash and encrypt/decrypt will throw errors or return gibberish.
 
-For more information on the AES cipher 
+For more information on the AES cipher https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 
 ### Author
 * **Joe Samela** - *Initial work* - [ForYourBrain.net](http://www.foryourbrain.net)
