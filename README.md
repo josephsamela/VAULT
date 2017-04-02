@@ -46,14 +46,14 @@ For faster access to account info enter "vault accountName".
 ![get](screenshots/screenshot1.png?raw=true "get")
 
 ###Can I sync my passwords across computers?
-Sure! Do you have a folder backed up by Google Drive, OneDrive, Dropbox or another cloud storage service? Add passwords.json to this folder and edit the path in vault.py to point to this new location. When you make edits Google Drive, Dropbox, OneDrive or whatever will sync the latest version across your connected devices and back it up to the cloud.
+Sure! Do you have a folder backed up by Google Drive, OneDrive, Dropbox or another cloud storage service? Add passwords.json to this folder and edit the path in vault.py to point to this new location. When you make edits Google Drive, Dropbox, OneDrive etc. will sync the latest version across your connected devices and back it up to the cloud.
 
 ###Is this safe?
-"9/10 Cryptologists say it's better than plaintext!"
+"10/10 Cryptologists say it's better than plaintext!"
 
-Seriously though, I'm not an encryption expert so please use this this software at you own risk. The password encryption algorithems are borrowed from the "pycrypto" package for python.
+Seriously though, I'm not an encryption expert so please use this this software at you own risk. The password encryption algorithems come from the "pycrypto" package for python.
 
-Passwords are encrypted using an AES cipher and 32 character key that's generated on-the-fly. This means the key is not stored on your computer, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong key and encrypt/decrypt will throw errors or return gibberish.
+Passwords are encrypted using an AES cipher with 32 character key (generated on-the-fly) and unique IV. This means the key is not stored on your computer, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong key and encrypt/decrypt will throw errors or return gibberish.
 
 For more information on the AES cipher see --> https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 
