@@ -1,7 +1,7 @@
 # VAULT
 ![VAULT](screenshots/banner.png?raw=true "VAULT")
 
-##What is VAULT?
+## What is VAULT?
 VAULT is a fast command line utility for securely storing and retrieving user account information.
 
 VAULT makes retrieving passwords as simple as:
@@ -14,7 +14,7 @@ $ vault github
     PASSWORD --> munorbust!
 ```
 
-###How do I set this up?
+### How do I set this up?
 Linux/MacOS
   1. Install Python 3.6 and "pycrypto" package
   2. Download the files in this repository to your computer (ie. ~/GitHub/vault)
@@ -25,7 +25,7 @@ Linux/MacOS
 Windows
   1. Instructions coming soon!
 
-###How do I use this?
+### How do I use this?
 After getting setup - type "vault" into a terminal window. This will return the following:
 ```
 -a will add a new account 
@@ -45,10 +45,10 @@ For example to add and account enter:
 For faster access to account info enter "vault accountName".
 ![get](screenshots/screenshot1.png?raw=true "get")
 
-###Can I sync my passwords across computers?
+### Can I sync my passwords across computers?
 Sure! Do you have a folder backed up by Google Drive, OneDrive, Dropbox or another cloud storage service? Add passwords.json to this folder and edit the path in vault.py to point to this new location. When you make edits Google Drive, Dropbox, OneDrive etc. will sync the latest version across your connected devices and back it up to the cloud.
 
-###Is this safe?
+### Is this safe?
 "10/10 Cryptologists say it's better than plaintext!"
 
 Seriously though, I'm not an encryption expert so please use this this software at you own risk. The password encryption algorithems come from the "pycrypto" package for python.
