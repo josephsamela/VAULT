@@ -1,5 +1,6 @@
 import json
 import sys
+import getpass
 from Crypto.Cipher import AES
 from Crypto.Hash import SHA256, MD5
 
@@ -83,7 +84,7 @@ class account():
         else:
             #Get credentials to add
             username = input('   USERNAME --> ')
-            password = input('   PASSWORD --> ')
+            password = getpass.getpass('   PASSWORD --> ')
 
             #Generate masterkey
             masterkey = generatemasterkey()
@@ -113,7 +114,7 @@ class account():
         if accountName in password_dictionary['account']:
             #Get new username & pass input
             username = input('   USERNAME --> ')
-            password = input('   PASSWORD --> ')
+            password = getpass.getpass('   PASSWORD --> ')
 
             #Generate masterkey
             masterkey = generatemasterkey()
@@ -177,7 +178,7 @@ class account():
             print('\n')
 
     def help():
-        print('VAULT is a fast command line utility for securely storing and retrieving user account information. \n\n-a will add a new account \n-r will remove an existing account \n-u will update information of an existing account \n-g will get information for an existing account \n-l will list information for all accounts \n-h displays this help dialog')
+        print('VAULT is a fast command line utility for securely storing and retrieving user account information. \n\n-a will add a new account \n-r will remove an existing account \n-u will update information of an existing account \n-g will get information for an existing account \n-l will list information for all accounts \n-h displays this help dialog\n\nThe quickest way to retrieve account information is to use vault *space* account-name ie. "vault google"')
 
 def encrypt(string, key):
     #This is the cipher used to encrypt and decrypt account info
@@ -203,7 +204,7 @@ def decrypt(string, key):
     return plaintext
 
 def generatemasterkey():
-    masterpassword = input('   MASTER PASSWORD --> ')
+    masterpassword = getpass.getpass('   MASTER PASSWORD --> ')
     masterpassword = masterpassword.encode() #password from str to bytes
     masterkey = MD5.new(masterpassword).hexdigest()
     return masterkey
