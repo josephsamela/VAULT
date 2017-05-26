@@ -84,7 +84,7 @@ class account():
         else:
             #Get credentials to add
             username = input('   USERNAME --> ')
-            password = getpass.getpass('   PASSWORD --> ')
+            password = input('   PASSWORD --> ')
 
             #Generate masterkey
             masterkey = generatemasterkey()
@@ -114,7 +114,7 @@ class account():
         if accountName in password_dictionary['account']:
             #Get new username & pass input
             username = input('   USERNAME --> ')
-            password = getpass.getpass('   PASSWORD --> ')
+            password = input('   PASSWORD --> ')
 
             #Generate masterkey
             masterkey = generatemasterkey()
