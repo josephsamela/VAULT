@@ -23,7 +23,11 @@ Linux/MacOS
   5. In vault.py update "path" variable to point at passwords.json
 
 Windows
-  1. Instructions coming soon!
+  1. Install Python 3.6 and "pycrypto" package
+  2. Download the files in this repository to your computer (ie. Username/GitHub/vault)
+  3. Add vault.bat script to C:\Users\Username
+  4. Edit vault.bat path to point at vault.py
+  5. In vault.py update "path" variable to point at passwords.json
 
 ### How do I use this?
 After getting setup - type "vault" into a terminal window. This will return the following:
