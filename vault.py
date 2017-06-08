@@ -166,7 +166,7 @@ class account():
         #Generate masterkey
         masterkey = generatemasterkey()
         #print all usernames and passwords
-        for key in password_dictionary['account'].keys():
+        for key in sorted(password_dictionary['account'].keys()):
             username = password_dictionary['account'][key]['username']
             password = password_dictionary['account'][key]['password']
             #Decrypt username and password to plaintext
