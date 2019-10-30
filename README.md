@@ -60,6 +60,3 @@ Seriously though, I'm not an encryption expert so please use this this software 
 Passwords are encrypted using an AES cipher with 32 character key (generated on-the-fly) and unique IV. This means the key is not stored on your computer, it's generated from user input upon encrypt/decrypt actions - then forgotten. Anything BUT the correct master password will generate the wrong key and encrypt/decrypt will throw errors or return gibberish.
 
 For more information on the AES cipher see --> https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
-
-### Author
-* **Joe Samela** - *Initial work* - [Homepage](https://josephsamela.github.io)
