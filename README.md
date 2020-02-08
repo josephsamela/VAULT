@@ -22,18 +22,18 @@ $ vault github                                  #Type vault account-name
 Linux/MacOS
 
   1. Install Python 3.6 and "pycrypto" package
-  2. Download the files in this repository to your computer (ie. ~/GitHub/vault)
-  3. Add vault shell script to ~/.bin
-  4. Add -->  export PATH=$PATH":$HOME/.bin"  <-- to .bash_profile or .bash_rc file
-  5. In vault.py update "path" variable to point at passwords.json
+  2. Download the files in this repository to your computer (ie. `~/GitHub/vault`)
+  3. Add vault shell script to `~/.bin`
+  4. Add `export PATH=$PATH":$HOME/.bin"` to `.bash_profile` or `.bash_rc` file
+  5. In `vault.py` update "path" variable to point at passwords.json
 
 Windows
 
   1. Install Python 3.6 and "pycrypto" package
-  2. Download the files in this repository to your computer (ie. Username/GitHub/vault)
-  3. Add vault.bat script to C:\Users\Username
-  4. Edit vault.bat path to point at vault.py
-  5. In vault.py update "path" variable to point at passwords.json
+  2. Download the files in this repository to your computer (ie. `Username/GitHub/vault`)
+  3. Add vault.bat script to `C:\Users\Username`
+  4. Edit vault.bat path to point at `vault.py`
+  5. In `vault.py` update "path" variable to point at `passwords.json`
 
 ### How do I use this?
 
